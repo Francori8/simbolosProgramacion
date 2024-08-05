@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100dvh;
+    background-color: beige;
+}
+
+header{
+    padding: 20px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+main{
+    width: 100%;
+    height: max-content;
+    padding: 20px;
+}
+
+#contenedor-simbolos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.tarjeta{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 125px;
+    height: 135px;
+    gap: 20px;
+    border: 2px solid black;  
+    border-radius: 20%;
+}
+
+.tarjeta:hover{
+    transition: all;
+    transform: scale(110%);
+}
+
+.subtitulo{
+    display: grid;
+    justify-items: center;
+}
+
+.botones{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.copy{
+    background-color: transparent;
+    padding: 5px;
+}
+
+.copy:hover{
+    cursor: pointer;
+    background-color: lightcyan;
+    
+    transform: scale(110%);
+}
+
+
+
+.fav{
+    background-color: transparent;
+    border: 0px ;
+}
+.fav:hover{
+    cursor: pointer;
+    transition: all;
+    transform: rotate(24deg);
+    
+}
+.fav:active{
+    color:violet
+}
+
+.corazon{
+    color: red;
+}
+
+.notificar{
+    transition: ease;
+    display: none;
+    position: relative;
+    bottom: 15px;
+    border-radius: 40%;
+    font-size: xx-small;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    
+}
+
+.visualizar{
+    display:block;
+    background-color: rgb(40, 223, 49);
+    color: black;
+}
+
+.visualizarPop{
+   border: 3px solid rgb(40, 223, 49);
+}
