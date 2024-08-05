@@ -8,6 +8,7 @@ body{
     width: 100%;
     height: 100dvh;
     background-color: beige;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 header{
@@ -33,6 +34,13 @@ main{
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+#buscar{
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: antiquewhite;
 }
 
 .tarjeta{
@@ -101,11 +109,11 @@ main{
     display: none;
     position: relative;
     bottom: 15px;
-    border-radius: 40%;
+    border-radius: 12px;
     font-size: xx-small;
     justify-content: center;
     align-items: center;
-    padding: 6px;
+    padding: 6px 12px;
     
 }
 

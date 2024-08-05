@@ -12,6 +12,12 @@ export default  [
 
     },
     {
+        id:3,
+        simbolo: "_",
+        temas:["guion bajo"]
+
+    },
+    {
         id:4,
         simbolo: ":",
         temas:["dos puntos"]
@@ -125,7 +131,51 @@ export default  [
         simbolo:"√",
         temas:["raiz","operacion aritmetica"]
 
+    },
+    {
+        id:24,
+        simbolo:"|",
+        temas:["or","o logico","barra vertical","operacion booleana"]
+
+    },
+    {
+        id:25,
+        simbolo:"&",
+        temas:["and","y logico","ampersand","operacion booleana"]
+
+    },
+    {
+        id:26,
+        simbolo:"¬",
+        temas:["not","negacion logico","operacion booleana"]
+
+    },
+    {
+        id:27,
+        simbolo:"%",
+        temas:["porcentaje","modulo","operacion aritmetica"]
+
+    },
+    {
+        id:28,
+        simbolo:"\\",
+        temas:["barra invertida","lambda","slash","division entera"]
+
+    },
+    {
+        id:29,
+        simbolo:"\\n",
+        temas:["salto de linea","strings","caracteres especiales"]
+
+    },
+    {
+        id:30,
+        simbolo:"\\t",
+        temas:["tabulacion","strings","caracteres especiales"]
+
     }
+    
+    
     
     
 ]

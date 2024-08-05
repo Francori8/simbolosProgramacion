@@ -9,8 +9,10 @@ function cargar(){
 
 function mostrarSimbolos(simbolos){
    const fav = JSON.parse(localStorage.getItem("favoritos")) || []
+   
    const simbolosOrdenadosSegunFavoritos = ordenarSiEstanFavoritos(simbolos, fav) 
-   const simbolosHTML = simbolos.map(val => {
+   
+   const simbolosHTML = simbolosOrdenadosSegunFavoritos.map(val => {
         return `<div class="tarjeta" title="${val.temas[0]}" >
                     <div class="subtitulo" >
                         <h2>${val.simbolo}</h2>
@@ -46,13 +48,11 @@ function cambiarfavoritos(e){
 
         e.target.classList.remove("corazon")
         fav.splice(fav.indexOf(idSimb),1)
-        localStorage.removeItem("favoritos")
         localStorage.setItem("favoritos",JSON.stringify(fav))
 
     }else{
         e.target.classList.add("corazon")
         fav.push(idSimb)
-        localStorage.removeItem("favoritos")
         localStorage.setItem("favoritos",JSON.stringify(fav))
     }
 }
@@ -69,7 +69,7 @@ async function copiarSimbolo(e){
 
 
 function ordenarSiEstanFavoritos(simbolos, fav){
-    return simbolos.sort((a,b) => {
+    return simbolos.toSorted((a,b) => {
         if(fav.includes( a.id + "")){
             return -1
         }
