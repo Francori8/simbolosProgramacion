@@ -1,14 +1,15 @@
-import simbolo from "./api.js"
-
+let simbolo 
 const $ = (args) => document.querySelector(args)
 $("#buscar").addEventListener("input",mostrarContenidoFiltrado)
 
-function cargar(){
+async function  cargar(){
+    const respuesta = await fetch("./api.json")
+    simbolo = await respuesta.json()
     mostrarSimbolos(simbolo)
 }
 
 function mostrarSimbolos(simbolos){
-   const fav = JSON.parse(localStorage.getItem("favoritos")) || []
+   const fav = JSON.parse(localStorage.getItem("favoritos")) ?? []
    
    const simbolosOrdenadosSegunFavoritos = ordenarSiEstanFavoritos(simbolos, fav) 
    
@@ -42,7 +43,7 @@ function mostrarSimbolos(simbolos){
 
 function cambiarfavoritos(e){
     const idSimb = e.target.dataset.id
-    const fav = JSON.parse(localStorage.getItem("favoritos")) || []
+    const fav = JSON.parse(localStorage.getItem("favoritos")) ?? []
     
     if(fav.includes(idSimb)){
 
