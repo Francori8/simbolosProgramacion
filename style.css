@@ -37,10 +37,13 @@ main{
 }
 
 #buscar{
-    width: 250px;
+    width: 300px;
+    height: 40px;
+    padding: 4px 8px;
     border: 2px solid black;
-    border-radius: 6px;
+    border-radius: 24px;
     background-color: antiquewhite;
+    
 }
 
 .tarjeta{
@@ -117,12 +120,22 @@ main{
     
 }
 
-.visualizar{
+.visualizarRojo{
+    display:block;
+    background-color: rgb(223, 77, 40);
+    color: black;
+}
+
+.visualizarVerde{
     display:block;
     background-color: rgb(40, 223, 49);
     color: black;
 }
 
-.visualizarPop{
+.visualizarPopVerde{
    border: 3px solid rgb(40, 223, 49);
+}
+
+.visualizarPopRojo{
+    border: 3px solid rgb(223, 77, 40);
 }

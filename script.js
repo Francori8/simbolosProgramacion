@@ -62,9 +62,10 @@ async function copiarSimbolo(e){
     const simbolo = e.target.dataset.valor
     try{
         await navigator.clipboard.writeText(simbolo)
-        escribirEnPop(e,"Copiado")
+        
+        escribirEnPopVerde(e,"Copiado")
     }catch(error){
-        escribirEnPop(e,"No se pudo copiar")
+        escribirEnPopRojo(e,"Error")
     }
 }
 
@@ -78,19 +79,30 @@ function ordenarSiEstanFavoritos(simbolos, fav){
     })
 }
 
-function escribirEnPop(elemento , mensaje){
+function escribirEnPopVerde(elemento , mensaje){
     
-    const contexto = elemento.target.parentNode.parentNode
-    const eleemntoNotificador  = contexto.querySelector(".notificar")
-    contexto.classList.add("visualizarPop")
-    eleemntoNotificador.classList.add("visualizar")
-    eleemntoNotificador.innerText = mensaje
-    setTimeout(() => {
-        eleemntoNotificador.classList.remove("visualizar")
-        contexto.classList.remove("visualizarPop")
-    }, 500)
+    escribirEnPop(elemento , mensaje , {contex:"visualizarPopVerde", notificacion:"visualizarVerde"})
     
 }
+
+function escribirEnPopRojo(elemento, mensaje){
+    escribirEnPop(elemento , mensaje , {contex:"visualizarPopRojo", notificacion:"visualizarRojo"})   
+}
+
+
+function escribirEnPop(elemento , mensaje , clases){
+    const {contex , notificacion} =  clases
+    const contexto = elemento.target.parentNode.parentNode
+    const eleemntoNotificador  = contexto.querySelector(".notificar")
+    contexto.classList.add(contex)
+    eleemntoNotificador.classList.add(notificacion)
+    eleemntoNotificador.innerText = mensaje
+    setTimeout(() => {
+        eleemntoNotificador.classList.remove(notificacion)
+        contexto.classList.remove(contex)
+    }, 500)
+}
+
 
 function mostrarContenidoFiltrado(e){
     const filtro = e.target.value.toLowerCase()
