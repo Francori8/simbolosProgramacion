@@ -213,8 +213,22 @@
         "id":38,
         "simbolo":"¡",
         "temas":["exclamacion","abierto"]
+    },
+    {
+        "id":39,
+        "simbolo":"↔",
+        "temas":["bicondicional","abierto"]
+    },
+    {
+        "id":40,
+        "simbolo":"⊢",
+        "temas":["trinquete"]
+    },
+    {
+        "id":41,
+        "simbolo":"⊨",
+        "temas":["doble trinquete"]
     }
-    
     
     
     
