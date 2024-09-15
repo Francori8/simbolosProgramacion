@@ -228,7 +228,19 @@
         "id":41,
         "simbolo":"⊨",
         "temas":["doble trinquete"]
+    },
+    {
+        "id":42,
+        "simbolo":"∀",
+        "temas":["para todo"]
+    },
+    {
+        "id":43,
+        "simbolo":"∃",
+        "temas":["existe"]
     }
+
+    
     
     
     
