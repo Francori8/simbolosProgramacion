@@ -238,6 +238,11 @@
         "id":43,
         "simbolo":"∃",
         "temas":["existe"]
+    },
+    {
+        "id":44,
+        "simbolo":"ñ",
+        "temas":["eñe"]
     }
 
     
